@@ -24,7 +24,7 @@
                             <th scope="col">Edad</th>
                             <th scope="col">Grado</th>
                             <th scope="col">Estado</th>
-                            <th scope="col">Acción</th>
+                            <th scope="col" class="text-center" colspan="2">Acción</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -38,8 +38,9 @@
                                 <span class="badge bg-primary" v-if="student.status == 'true'">Aprobado</span>
                                 <span class="badge bg-danger" v-else>Reprobado</span>
                             </td>
-                            <td>
-                                <button @click.prevent="deleteStudent(student._id)" class="btn btn-sm btn-danger">Borrar</button>
+                            <td class="text-center" colspan="2">
+                                <router-link :to="{name: 'edit', params: { id: student._id }}" class="btn btn-sm btn-success text-white"><i class="bi bi-pencil-fill"></i></router-link>
+                                <button @click.prevent="deleteStudent(student._id)" class="btn btn-sm btn-danger ms-2"><i class="bi bi-trash2-fill"></i></button>
                             </td>
                         </tr>
                     </tbody>

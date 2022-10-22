@@ -13,6 +13,11 @@ const routes = [
     path: '/create-student',
     name: 'createStudent',
     component: () => import('../components/CreateComponent')
+  },
+  {
+    path: '/edit/:id',
+    name: 'edit',
+    component: () => import('../components/EditComponent')
   }
 ]
 
